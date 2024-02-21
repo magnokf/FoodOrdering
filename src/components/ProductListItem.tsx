@@ -13,7 +13,7 @@ type ProductListItemProps = {
 
 function ProductListItem({ product }: ProductListItemProps) {
 	return (
-		<Link href={`/product`} style={{ marginTop: 10 }} asChild>
+		<Link href={`/menu/${product.id}`} style={{ marginTop: 10 }} asChild>
 			<Pressable style={styles.container}>
 				<Image
 					source={{ uri: product.image || defaultPizzaImage }}
