@@ -1,11 +1,17 @@
+export type Price = {
+  id: number;
+  price: number;
+  sizes: string;
+};
+
 export type Product = {
   id: number;
   image: string | null;
   name: string;
-  price: number;
+  prices: Price[];
 };
 
-export type PizzaSize = 'S' | 'M' | 'L' | 'XL';
+export type PizzaSize = 'Média' | 'Grande' | 'Família';
 
 export type CartItem = {
   id: string;

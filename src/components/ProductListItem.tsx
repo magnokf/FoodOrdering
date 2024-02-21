@@ -21,7 +21,11 @@ function ProductListItem({ product }: ProductListItemProps) {
 					resizeMode="contain"
 				/>
 				<Text style={styles.title}>{product.name}</Text>
-				<Text style={styles.price}>${product.price}</Text>
+				{product.prices.length > 0 && (
+					<Text style={styles.price}>
+						{product.prices[0].sizes} - R${product.prices[0].price}
+					</Text>
+				)}
 			</Pressable>
 		</Link>
 	);
